@@ -1,33 +1,24 @@
-const btnOpen = document.querySelector('#btnOpen');
-const btnClose = document.querySelector('#btnClose');
-const navMenu = document.querySelector('.nav-menu');
-const overlay = document.querySelector('.overlay');
+'use strict';
+
+const toggleButton = document.getElementById('toggleButton');
+const navBar = document.querySelector('.nav-links ul');
+const background = document.querySelector('.bg');
+const overlay = document.querySelector('.overlay')
 const imgProducts = document.querySelectorAll('.product-image');
 const btnNext = document.querySelector('.--next');
 const btnPrev = document.querySelector('.--prev');
-const dots = document.querySelectorAll('.dot')
+const dots = document.querySelectorAll('.dot');
 
-
-// navigation functionality
-function openMobileMenu() {
-  btnOpen.setAttribute('aria-expanded', 'true');
-  navMenu.classList.add('open');
-  overlay.classList.remove('hidden');
+function toggleMenu() {
+  overlay.classList.toggle('open')
+  background.classList.toggle('open');
+  navBar.classList.toggle('open');
+  toggleButton.classList.toggle('open');
 }
 
-function closeMobileMenu() {
-  btnOpen.setAttribute('aria-expanded', 'false');
-  navMenu.classList.remove('open');
-  overlay.classList.add('hidden');
-}
-
-btnOpen.addEventListener('click', openMobileMenu);
-btnClose.addEventListener('click', closeMobileMenu);
-overlay.addEventListener('click', closeMobileMenu);
-
-
+toggleButton.addEventListener('click', toggleMenu);
+overlay.addEventListener('click' , toggleMenu )
 // Image slider functionality
-
 let currentImg = 0;
 document.addEventListener('DOMContentLoaded', initializeImg);
 
