@@ -18,15 +18,17 @@
         <div class="leftside-wrapper">
         <div class="left-items">
 
-          <button id="toggleButton" aria-label="toggle navigation menu" >
+          <button id="openMenu" aria-expanded="false" aria-label="open navigation menu" >
             <img class="open-icon" src="images/icon-menu.svg" alt="close-menu" />
+          </button>
+          <button  id="closeMenu" aria-label="close navigation menu">
             <img class="close-icon" src="images/icon-close.svg" alt="">
           </button>
 
 
           <img src="images/logo.svg" alt="" />
         </div>
-        <div class="nav-links bg">
+        <div class="nav-links ">
           <ul>
             <li><a href="">Collections</a></li>
             <li><a href="">Women</a></li>
@@ -138,7 +140,7 @@
         </button>
       </div>
     </main>
-    <div class="overlay"></div>
+    <div class="overlay hidden"></div>
 
     <script src="script.js"></script>
   </body>
